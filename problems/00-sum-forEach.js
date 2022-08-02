@@ -11,6 +11,7 @@ console.log(sumForEach([6, 7, 2])); // 15
 console.log(sumForEach([])); // 0
 */
 
+// anonymous function version
 // let sumForEach = function(arr) {
 //   // Your code here
 //   let total = 0;
@@ -22,10 +23,15 @@ console.log(sumForEach([])); // 0
 
 let sumForEach = function(arr) {
   // Your code here
+
+  /*
+- all you have to remember is that for each calls a function as a parameter
+- within forEach it takes 3 parameters, element, index, array
+- therefore these are the things we can use in the brackets. 
+- then the => denotes where the function starts using the necessary variables. Note we may need to declare variables outside the function itself. 
+  */
   let total = 0;
-  arr.forEach(function (e){
-    total += e;
-  })
+  arr.forEach( (e) => total += e)
   return total;
 };
 
