@@ -11,18 +11,19 @@ console.log(tripler([2, 7, 4])); // [ 6, 21, 12 ]
 console.log(tripler([-5, 10, 0, 11])); // [ -15, 30, 0, 33 ]
 */
 
-//
-let tripler = function(nums) {
-  // Your code here
-  const tripleNum = nums.map(function(e){return e*3});
-  return tripleNum;
-};
-
+// using an anoymous function
 // let tripler = function(nums) {
-//     // Your code here
-//     const tripleNum = nums.map(e => e*3 );
-//     return tripleNum;
+//   // Your code here
+//   const tripleNum = nums.map(function(e){return e*3});
+//   return tripleNum;
 // };
+
+//using an arrow function
+let tripler = function(nums) {
+    // Your code here
+    const tripleNum = nums.map(e => e*3 );
+    return tripleNum;
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
