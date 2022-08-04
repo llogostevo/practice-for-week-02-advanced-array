@@ -18,7 +18,7 @@ let removeEWords = function(sentence) {
   let words = sentence.split(' ');
 
   const wordsNoE = words.filter( element => element.toLowerCase().indexOf('e')===-1);
-  return wordsNoE;
+  return wordsNoE.join(" ");
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

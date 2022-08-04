@@ -30,7 +30,6 @@ let chooseyEndings = function(words, suffix) {
   let choosey = [];
   if (Array.isArray(words)){
     choosey = words.filter(word => word.endsWith(suffix));
-    console.log(choosey);
   } else {
     choosey = [];
   }
