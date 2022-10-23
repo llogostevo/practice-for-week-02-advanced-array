@@ -26,17 +26,20 @@ console.log(chooseyEndings(17, 'ily'));
 */
 
 let chooseyEndings = function(words, suffix) {
-  // Your code here
-  let choosey = [];
+  // check if words is an array, if yes then filter out using endwith and suffix
   if (Array.isArray(words)){
-    choosey = words.filter(word => word.endsWith(suffix));
-  } else {
-    choosey = [];
-  }
-  return choosey;
-
+    const result = words.filter(word => word.endsWith(suffix));
+   return result;
     
+  } else {
+    // if not an array return an empty array
+    return [];
+  }
+  
+
 };
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
@@ -44,4 +47,4 @@ try {
   module.exports = chooseyEndings;
 } catch (e) {
   module.exports = null;
-}
+}

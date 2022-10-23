@@ -20,16 +20,21 @@ console.log(choosePrimes([5, 6, 4, 11, 2017])); // [ 5, 11, 2017 ]
 
 let isPrime = function(num) {
     // Your code here
+    let i=2;
+    while (i<num){
+      if ((num % i) == 0 ){
+          return true;
+        }
+    i++
+    }
 }
 
 let choosePrimes = function(nums) {
     // Your code here
+    return nums.filter(element => !(isPrime(element)))
 }
+console.log(choosePrimes)
 
-// alternative solution using Array.filter
-// let choosePrimes = function(nums) {
-//     return nums.filter(isPrime);
-// }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

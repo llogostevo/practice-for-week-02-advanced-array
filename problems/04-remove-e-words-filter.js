@@ -12,13 +12,14 @@ console.log(removeEWords('Enter the building')); // 'building'
 
 */
 
-
 let removeEWords = function(sentence) {
-  // Your code here
-  let words = sentence.split(' ');
+    // split sentence into words
+  const words = sentence.split(" ");
 
-  const wordsNoE = words.filter( element => element.toLowerCase().indexOf('e')===-1);
-  return wordsNoE.join(" ");
+  //filter out words not including e, using reg ex and not
+  // join the array together into a new array with the joined string
+  const noEwords = (words.filter(word => !(/[e]/i.test(word))).join(' '));
+  return noEwords;
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
@@ -27,4 +28,4 @@ try {
   module.exports = removeEWords;
 } catch (e) {
   module.exports = null;
-}
+}

@@ -10,10 +10,18 @@ Examples:
 console.log(yeller(['hello', 'world'])); // [ 'HELLO!', 'WORLD!' ]
 console.log(yeller(['kiwi', 'orange', 'mango'])); // [ 'KIWI!', 'ORANGE!', 'MANGO!' ]
 
+
+- array of words as paramter
+- each element is yelled
+- made into capitals
+- append onto word !
+
 */
 
 let yeller = function(words) {
   // Your code here
+  const yell = words.map(word => word.toUpperCase()+"!");
+  return yell;
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

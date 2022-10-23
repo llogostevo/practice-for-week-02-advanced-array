@@ -14,8 +14,26 @@ console.log(unique(['a', 'b', 'c', 'b'])); // ['a', 'b', 'c']
 
 */
 
-let unique = function(array) {
-    // Your code here
+let unique = function(array) { 
+  // Your code here
+  let newArray = [];
+  let flag = 0;
+  array.forEach(element =>{
+    // check the curretn element against each element in the new array
+      newArray.forEach(newElement => {
+        if (newElement == element){
+          // flag if there is a match cycling through whole array
+          flag = 1;
+        }});
+      // if match not found after cycling whole array then push the element on the new array
+      if (flag != 1){
+        newArray.push(element);
+      }
+    // reset the flag so that next passing identifies elements yet to be flagged. 
+      flag = 0;
+  });
+console.log(newArray);
+return newArray;
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

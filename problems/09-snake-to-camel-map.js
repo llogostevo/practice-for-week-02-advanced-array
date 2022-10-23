@@ -15,8 +15,21 @@ console.log(snakeToCamel('APp_ACADEMY_iS_cOol')); // 'AppAcademyIsCool'
 
 */
 
+/*
+- split the string first removing all the _
+- then I used a map to cycle through each element
+- firstly capitalizing each element of the string at 0 which returns that letter
+- then concatentating the rest of the element using slice, but also lowercasing that side of the element
+- finally joining back the elements together on the returning using the join method on the array with "" so that it joins them with no dividers as single strings. 
+    - nb default join would have been with commas ,
+    
+*/
+
 function snakeToCamel(str) {
-    // Your code here
+  const elements = str.split("_")
+  
+  const pascalised = elements.map(element => element.charAt(0).toUpperCase() + element.slice(1).toLowerCase());
+  return pascalised.join("");
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
